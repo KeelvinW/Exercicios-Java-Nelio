@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CalculoValorMetroQuadrado {
 
 	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
 		Scanner leia = new Scanner (System.in);
 		
 		double larg = 0;
@@ -14,7 +15,7 @@ public class CalculoValorMetroQuadrado {
 		double preco = 0;
 		int cidade = 0;
 		
-		Locale.setDefault(Locale.US);
+		
 		System.out.println("CALCULE O VALOR DO M² EM TODOS OS TERRENOS DA SUA REGIÃO!");
 		
 		System.out.println("Digite a largura do terreno: ");
@@ -38,7 +39,7 @@ public class CalculoValorMetroQuadrado {
 			switch (cidade) {
 				case 1 -> {
 					preco = area * 9098;
-					System.out.printf("Na cidade de Brasília a area total de %.3fM² tem o valor total de R$ %.2f", area, preco);
+					System.out.printf("Na cidade de Brasília a area total de %.2fM² tem o valor total de R$ %.2f", area, preco);
 				}
 				case 2 -> {
 					preco = area * 8158;
